@@ -1,3 +1,9 @@
+*
+{
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
+}
+
 header
 {
     grid-area: header;
@@ -7,19 +13,16 @@ header
 .main
 {
     grid-area: main;
-    background-color: red;
 }
 
 .sidebar
 {
     grid-area: sidebar;
-    background-color: green;
 }
 
 footer
 {
     grid-area: footer;
-    background-color: blueviolet;
 }
 
 body
@@ -32,6 +35,7 @@ body
     " main sidebar"
     " footer footer";
     grid-template-rows: 60px auto 60px;
+    background-color: antiquewhite;
 }
 
 header
@@ -43,13 +47,14 @@ header
 
 header ul 
 {
-    padding-left: 0;
+    padding-left: 10px;
 }
 
 header ul li
 {
     display: inline-block;
     padding: 0 15px;
+    font-weight: bold;
 }
 
 .main
@@ -63,6 +68,22 @@ header ul li
 {
     border: 5px solid black;
     border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.MainHeading h2
+{
+    overflow: hidden;
+    margin: 0;
+    margin-top: 5px;
+    width: 50%;
+    line-height: 100%;
+    text-align: center;
 }
 
 .MainDescription
@@ -70,6 +91,24 @@ header ul li
     border: 5px solid black;
     border-top: 0;
     border-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap:20%;
+    overflow: hidden;
+}
+
+.MainDescription h4
+{
+    margin: 0;
+}
+
+
+.MainDescription h3
+{
+    margin: 0;
+    font-size: 30px;
 }
 
 .MainImageSection
@@ -77,7 +116,19 @@ header ul li
     border: 5px solid black;
     border-top: 0;
     grid-column: 1/3;
+    object-fit: cover; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.MainImageSection img
+{
+    width: 99.5%;
+    height: 99.5%;
+}
+
 
 .sidebar
 {
@@ -92,6 +143,23 @@ header ul li
     border: 5px solid black;
     border-top: 0;
     border-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.SideBookImage h4 a
+{
+    font-size: 20px;
+}
+
+.SideBookImage img
+{
+    object-fit: cover;
+    height: 90%;
 }
 
 .SideSynopsis
@@ -100,6 +168,24 @@ header ul li
     border: 5px solid black;
     border-top: 0;
     border-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 5%; */
+}
+
+.SideSynopsis h4 a
+{
+    font-size: 20px;
+}
+
+.SideSynopsis  h2
+{
+    font-size: 35px;
+    width: 80%;
+    text-align: center;
+    line-height: 100%;
 }
 
 .SideAuthor
@@ -107,6 +193,22 @@ header ul li
     border: 5px solid black;
     border-top: 0;
     border-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 50%;
+    overflow: hidden;
+}
+
+.SideAuthor h4 a
+{
+    font-size: 20px;
+}
+
+.SideAuthor h2
+{
+    font-size: 35px;
 }
 
 .SideShop
@@ -114,6 +216,67 @@ header ul li
     border: 5px solid black;
     border-top: 0;
     border-left: 0;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.SideShop div i
+{
+    font-size: 20px;
+}
+
+.mail
+{
+    border: 5px solid black;
+    border-top: 0;
+    border-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.twitter
+{
+    border: 5px solid black;
+    border-top: 0;
+    border-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.SideShopHeading{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.linkedin
+{
+    border-right: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.printrest
+{
+    border-right: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
 }
 
 footer
@@ -130,6 +293,11 @@ footer
 {
     border: 5px solid black;
     border-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .EventLink
@@ -137,4 +305,9 @@ footer
     border: 5px solid black;
     border-top: 0;
     border-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: bold;
 }
